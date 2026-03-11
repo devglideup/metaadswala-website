@@ -1,0 +1,688 @@
+/* MetaAdsWala - Global Responsive Styles */
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Prevent sticky CTA overlap on mobile */
+@media (max-width: 767px) {
+    body {
+        padding-bottom: 88px;
+    }
+}
+
+/* Reduce heavy GPU effects on mobile */
+@media (max-width: 640px) {
+    nav {
+        backdrop-filter: none !important;
+        background-color: #ffffff !important;
+    }
+
+    .hero-form-card {
+        backdrop-filter: none !important;
+        background-color: #ffffff !important;
+    }
+
+    .hero-blob {
+        display: none !important;
+    }
+
+    .transition-all {
+        transition: none !important;
+    }
+
+    .transition-transform {
+        transition: none !important;
+    }
+
+    .drop-shadow-2xl,
+    .drop-shadow-xl,
+    .drop-shadow-lg {
+        filter: none !important;
+    }
+
+    .backdrop-blur-sm,
+    .backdrop-blur,
+    .backdrop-blur-md,
+    .backdrop-blur-lg,
+    .backdrop-blur-xl,
+    .backdrop-blur-2xl {
+        backdrop-filter: none !important;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   Typography Responsive
+   ========================================================================== */
+
+/* Responsive headline sizing for very small screens */
+@media (max-width: 374px) {
+    h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.2 !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.125rem !important;
+    }
+}
+
+/* ==========================================================================
+   Navigation Enhancements
+   ========================================================================== */
+
+/* Mobile link styling */
+.mobile-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.mobile-link:hover,
+.mobile-link:focus {
+    background-color: #f1f5f9;
+    color: #0F4C81;
+}
+
+/* Nav scroll state */
+nav.scrolled {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   Background Blobs - Responsive
+   ========================================================================== */
+
+/* Limit blob sizes on mobile to prevent overflow */
+@media (max-width: 640px) {
+
+    .animate-blob,
+    [class*="bg-"][class*="blur-3xl"] {
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .animate-blob,
+    [class*="bg-"][class*="blur-3xl"] {
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+
+/* ==========================================================================
+   Hero Section Floating Elements
+   ========================================================================== */
+
+/* Make floating cards responsive */
+.floating-card {
+    position: absolute;
+    z-index: 20;
+}
+
+/* Ensure hero form card is properly sized on all screens */
+@media (max-width: 767px) {
+
+    /* Center and optimize form on mobile */
+    .hero-form-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+}
+
+/* Tablet and small desktop optimization */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-form-card {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    /* Hide floating elements on tablets and below for cleaner mobile experience */
+    .floating-element {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-blob {
+    animation: blob 7s infinite;
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .animate-blob,
+    .animate-pulse,
+    [class*="animate-"] {
+        animation: none !important;
+    }
+
+    * {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==========================================================================
+   Text Gradient
+   ========================================================================== */
+
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #2B6CB0, #FF4757);
+}
+
+/* ==========================================================================
+   Scroll Reveal Utility (disabled for fast load)
+   ========================================================================== */
+
+.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.reveal.active {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* ==========================================================================
+   Cards & Components
+   ========================================================================== */
+
+/* Service cards responsive */
+@media (max-width: 640px) {
+    .service-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Stats cards */
+@media (max-width: 374px) {
+    .stat-card h3 {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* ==========================================================================
+   Tables - Comparison Section Responsive
+   ========================================================================== */
+
+/* Make comparison tables scrollable on mobile */
+.comparison-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+    .comparison-table {
+        min-width: 600px;
+    }
+
+    /* Stack comparison table on very small screens */
+    .comparison-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .comparison-row>div {
+        text-align: left !important;
+    }
+}
+
+/* ==========================================================================
+   Forms - Contact Page & Hero Forms
+   ========================================================================== */
+
+/* Better touch targets on mobile */
+@media (max-width: 640px) {
+
+    input,
+    select,
+    textarea,
+    button {
+        min-height: 48px;
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+    }
+}
+
+/* Hero Form Card Enhancements */
+.hero-form-card {
+    /* Add any custom form card styles here */
+}
+
+/* Form Input Focus Animation */
+input:focus,
+select:focus,
+textarea:focus {
+    transform: translateY(-1px);
+}
+
+/* Custom Select Arrow for Hero Form */
+select {
+    cursor: pointer;
+}
+
+/* Prevent iOS zoom on form inputs */
+@supports (-webkit-touch-callout: none) {
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    select,
+    textarea {
+        font-size: 16px;
+    }
+}
+
+/* Form Button Loading State */
+button[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Form Validation Styles */
+input:invalid:not(:placeholder-shown),
+select:invalid:not(:placeholder-shown) {
+    border-color: #ef4444;
+}
+
+input:valid:not(:placeholder-shown),
+select:valid {
+    border-color: #10b981;
+}
+
+/* Mobile Form Optimization */
+@media (max-width: 640px) {
+
+    /* Hero form card on mobile */
+    #hero-contact-form input,
+    #hero-contact-form select,
+    #hero-contact-form button {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    /* Improve tap targets */
+    #hero-contact-form label {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Full width form on small screens */
+    .hero-form-card {
+        max-width: 100%;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 374px) {
+    #hero-contact-form {
+        padding: 1rem;
+    }
+
+    #hero-contact-form input,
+    #hero-contact-form select {
+        padding: 0.75rem;
+        font-size: 14px;
+    }
+
+    /* Optimize hero form card padding on very small screens */
+    #hero-contact-form .space-y-4>*+* {
+        margin-top: 0.75rem;
+    }
+
+    /* Make labels slightly smaller on tiny screens */
+    #hero-contact-form label {
+        font-size: 0.65rem;
+    }
+
+    /* Adjust button text size */
+    #hero-contact-form button {
+        font-size: 0.875rem;
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem;
+    }
+}
+
+/* Landscape orientation for small phones */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero-form-card {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #hero-contact-form .space-y-4>*+* {
+        margin-top: 0.5rem;
+    }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    footer ul {
+        margin-top: 1rem;
+    }
+}
+
+/* ==========================================================================
+   Mobile Sticky CTA
+   ========================================================================== */
+
+.mobile-sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    background-color: white;
+    border-top: 1px solid #e2e8f0;
+    padding: 0.75rem;
+    display: flex;
+    gap: 0.75rem;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .mobile-sticky-cta {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   Container Padding Adjustments
+   ========================================================================== */
+
+@media (max-width: 374px) {
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+/* ==========================================================================
+   Image Optimization
+   ========================================================================== */
+
+/* Lazy loading placeholder */
+img[loading="lazy"] {
+    background-color: #f1f5f9;
+}
+
+/* Hero images */
+@media (max-width: 640px) {
+    .hero-image {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Button Enhancements
+   ========================================================================== */
+
+/* Better touch feedback */
+button,
+a[role="button"],
+.btn {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Full width buttons on mobile */
+@media (max-width: 640px) {
+    .btn-responsive {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ==========================================================================
+   Grid Fixes
+   ========================================================================== */
+
+/* Ensure grids don't break on small screens */
+@media (max-width: 374px) {
+    .grid-cols-2 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ==========================================================================
+   Partner Logos Section
+   ========================================================================== */
+
+@media (max-width: 640px) {
+    .partner-logos {
+        gap: 1.5rem;
+    }
+
+    .partner-logos img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .partner-logos {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .partner-logos>div {
+        white-space: nowrap;
+        font-size: 1.125rem;
+    }
+}
+
+/* ==========================================================================
+   Floating Elements Animation Fix
+   ========================================================================== */
+
+/* Prevent floating elements from causing overflow */
+@media (max-width: 1024px) {
+
+    [class*="absolute"][class*="-right-"],
+    [class*="absolute"][class*="-left-"] {
+        right: 0 !important;
+        left: 0 !important;
+    }
+}
+
+/* ==========================================================================
+   Services Grid on Mobile
+   ========================================================================== */
+
+@media (max-width: 640px) {
+    .services-grid .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .services-grid .service-icon img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* ==========================================================================
+   Process Steps Timeline
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .process-timeline::before {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   Safe Areas for Notched Devices
+   ========================================================================== */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+    .mobile-sticky-cta {
+        padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+    }
+
+    footer {
+        padding-bottom: calc(3rem + env(safe-area-inset-bottom));
+    }
+}
+
+/* ==========================================================================
+   Focus States for Accessibility
+   ========================================================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #0F4C81;
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+
+    .mobile-sticky-cta,
+    nav,
+    .animate-blob {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+}
+
+/* ==========================================================================
+   Performance: disable animations for instant load
+   ========================================================================== */
+
+.animate-blob,
+.animate-pulse,
+[class*="animate-"] {
+    animation: none !important;
+}
+
+/* Hero overlay optimization on mobile */
+@media (max-width: 640px) {
+    .hero-overlay {
+        backdrop-filter: none;
+    }
+}
+
+/* Defer rendering for below-the-fold sections */
+@supports (content-visibility: auto) {
+    .perf-section {
+        content-visibility: auto;
+        contain-intrinsic-size: 800px;
+    }
+}
+
+/* FAQ accordion */
+.faq-answer {
+    display: none;
+}
+
+.faq-item.is-open .faq-answer {
+    display: block;
+}
+
+.faq-icon {
+    transition: transform 0.2s ease;
+}
+
+.faq-item.is-open .faq-icon {
+    transform: rotate(180deg);
+}

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Ad Blocker Graceful Degradation - Prevents console errors -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function () { dataLayer.push(arguments); };
+        window.clarity = window.clarity || function () { (window.clarity.q = window.clarity.q || []).push(arguments); };
+    </script>
+    <!-- Google Analytics 4 - moved to end of body for faster initial load -->
+    <!-- Track Conversion on Thank You Page -->
+    <script>
+        window.addEventListener('load', function () {
+            try {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', {
+                        'event_category': 'form_submission',
+                        'event_label': 'contact_form_success',
+                        'value': 1
+                    });
+                    gtag('event', 'generate_lead', {
+                        'currency': 'INR',
+                        'value': 5000
+                    });
+                }
+            } catch (e) {
+                // Silent fail - tracking might be blocked
+            }
+        });
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Thank You - MetaAdsWala | Best & Affordable Digital Marketing Company Nirman Vihar Delhi</title>
+    <meta name="title"
+        content="Thank You - MetaAdsWala | Best & Affordable Digital Marketing Company Nirman Vihar Delhi">
+    <meta name="description"
+        content="Thank you for contacting MetaAdsWala, Delhi's best & affordable Digital Marketing Company in Nirman Vihar! Our team of Performance Marketing experts will reach out within 24 hours with your free audit report.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://metaadswala.com/thank-you.html">
+
+    <!-- Favicons (Google Search Compatible) -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0F4C81">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#0F4C81',
+                            light: '#2B6CB0',
+                            dark: '#0a365c',
+                        },
+                        secondary: {
+                            DEFAULT: '#FF4757',
+                            hover: '#FF6B81',
+                        },
+                        dark: {
+                            DEFAULT: '#1e293b',
+                            light: '#334155',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes checkmark {
+            0% {
+                stroke-dashoffset: 100;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-pulse-ring {
+            animation: pulse-ring 1.5s ease-out infinite;
+        }
+
+        .checkmark-circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            animation: checkmark 0.6s ease-in-out forwards;
+        }
+
+        .checkmark-check {
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: checkmark 0.3s ease-in-out 0.6s forwards;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-slate-800 bg-slate-50 min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="container mx-auto px-4 h-20 flex justify-between items-center">
+            <a href="/" class="text-2xl font-heading font-extrabold text-primary flex items-center gap-1">
+                MetaAds<span class="text-secondary">Wala</span>
+            </a>
+            <a href="/"
+                class="text-sm font-medium text-slate-600 hover:text-primary transition-colors flex items-center gap-2">
+                <i data-lucide="home" class="w-4 h-4"></i> Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center px-4 py-12 sm:py-16 md:py-20">
+        <div class="max-w-2xl w-full text-center">
+
+            <!-- Success Animation -->
+            <div class="relative mb-8 sm:mb-10">
+                <!-- Pulse rings -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-green-500/20 animate-pulse-ring"></div>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center" style="animation-delay: 0.5s;">
+                    <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-green-500/10 animate-pulse-ring"
+                        style="animation-delay: 0.5s;"></div>
+                </div>
+
+                <!-- Check icon -->
+                <div
+                    class="relative z-10 w-24 h-24 sm:w-32 sm:h-32 mx-auto bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/30 animate-float">
+                    <svg class="w-12 h-12 sm:w-16 sm:h-16 text-white" viewBox="0 0 52 52">
+                        <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" stroke="currentColor"
+                            stroke-width="2" />
+                        <path class="checkmark-check" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round" d="M14 27l7 7 16-16" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-slate-900 mb-4 sm:mb-6">
+                Thank You! <span class="text-secondary">🎉</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-600 mb-6 sm:mb-8 leading-relaxed max-w-lg mx-auto">
+                Your request has been received successfully. Our best & affordable Performance Marketing experts from
+                Nirman Vihar Delhi will reach out within <strong class="text-primary">24 hours</strong> with your
+                personalized audit for Instagram Ads, Google Ads, SEO, or D2C Marketing services.
+            </p>
+
+            <!-- What's Next Card -->
+            <div
+                class="bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-slate-100 p-6 sm:p-8 mb-8 sm:mb-10 text-left">
+                <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-4 sm:mb-6 flex items-center gap-2">
+                    <i data-lucide="sparkles" class="w-5 h-5 text-secondary"></i>
+                    What Happens Next?
+                </h2>
+
+                <div class="space-y-4 sm:space-y-5">
+                    <div class="flex items-start gap-3 sm:gap-4">
+                        <div
+                            class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                            <span class="text-primary font-bold text-sm sm:text-base">1</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-sm sm:text-base">Account Audit</h3>
+                            <p class="text-slate-500 text-xs sm:text-sm">We'll analyze your current digital presence</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 sm:gap-4">
+                        <div
+                            class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                            <span class="text-primary font-bold text-sm sm:text-base">2</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-sm sm:text-base">Strategy Call</h3>
+                            <p class="text-slate-500 text-xs sm:text-sm">Our expert will schedule a call to discuss
+                                growth opportunities</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 sm:gap-4">
+                        <div
+                            class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                            <span class="text-primary font-bold text-sm sm:text-base">3</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-sm sm:text-base">Custom Roadmap</h3>
+                            <p class="text-slate-500 text-xs sm:text-sm">Receive a tailored growth plan for your
+                                business</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                <a href="/"
+                    class="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-hover text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold shadow-lg shadow-secondary/25 transition-all hover:scale-105 active:scale-95 text-sm sm:text-base">
+                    <i data-lucide="home" class="w-4 h-4 sm:w-5 sm:h-5"></i> Back to Homepage
+                </a>
+                <a href="tel:+919797989421"
+                    class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold transition-all hover:border-slate-300 text-sm sm:text-base">
+                    <i data-lucide="phone" class="w-4 h-4 sm:w-5 sm:h-5"></i> Call Us Now
+                </a>
+            </div>
+
+            <!-- Trust Badge -->
+            <div class="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-200">
+                <p class="text-xs sm:text-sm text-slate-400 mb-4">Trusted by 500+ brands including</p>
+                <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-8 opacity-50">
+                    <span class="text-base sm:text-lg font-heading font-black text-slate-300">NexusTech</span>
+                    <span class="text-base sm:text-lg font-heading font-black text-slate-300">GlobalMart</span>
+                    <span class="text-base sm:text-lg font-heading font-black text-slate-300">Elevate</span>
+                </div>
+            </div>
+
+            <!-- Connect With Us -->
+            <div class="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-200">
+                <p class="text-xs sm:text-sm text-slate-500 mb-4">Connect with us on social media</p>
+                <div class="flex justify-center gap-4">
+                    <a href="https://instagram.com/metaadswala" target="_blank"
+                        class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-xl flex items-center justify-center text-white hover:scale-110 transition-transform">
+                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://facebook.com/metaadswala" target="_blank"
+                        class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white hover:scale-110 transition-transform">
+                        <i data-lucide="facebook" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/metaadswala" target="_blank"
+                        class="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center text-white hover:scale-110 transition-transform">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://twitter.com/metaadswala" target="_blank"
+                        class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-white hover:scale-110 transition-transform">
+                        <i data-lucide="twitter" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Explore Our Services -->
+    <section class="py-12 sm:py-16 bg-white border-t border-slate-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-xl sm:text-2xl font-bold text-center text-slate-900 mb-8">While You Wait, Explore Our
+                Services</h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <a href="meta-ads.html"
+                    class="bg-gradient-to-br from-pink-50 to-white p-4 sm:p-6 rounded-xl border border-pink-100 hover:shadow-lg transition-all text-center group">
+                    <div
+                        class="w-12 h-12 bg-pink-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform text-white">
+                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm sm:text-base">Meta Ads</h3>
+                    <p class="text-xs text-slate-500 mt-1">Facebook & Instagram</p>
+                </a>
+
+                <a href="google-ads.html"
+                    class="bg-gradient-to-br from-blue-50 to-white p-4 sm:p-6 rounded-xl border border-blue-100 hover:shadow-lg transition-all text-center group">
+                    <div
+                        class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform text-white">
+                        <i data-lucide="search" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm sm:text-base">Google Ads</h3>
+                    <p class="text-xs text-slate-500 mt-1">PPC & Shopping</p>
+                </a>
+
+                <a href="seo.html"
+                    class="bg-gradient-to-br from-green-50 to-white p-4 sm:p-6 rounded-xl border border-green-100 hover:shadow-lg transition-all text-center group">
+                    <div
+                        class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform text-white">
+                        <i data-lucide="trending-up" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm sm:text-base">SEO</h3>
+                    <p class="text-xs text-slate-500 mt-1">Organic Growth</p>
+                </a>
+
+                <a href="web-development.html"
+                    class="bg-gradient-to-br from-orange-50 to-white p-4 sm:p-6 rounded-xl border border-orange-100 hover:shadow-lg transition-all text-center group">
+                    <div
+                        class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform text-white">
+                        <i data-lucide="code" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm sm:text-base">Web Dev</h3>
+                    <p class="text-xs text-slate-500 mt-1">Shopify & More</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="py-12 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-center">
+                <div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-primary">₹250Cr+</h3>
+                    <p class="text-xs sm:text-sm text-slate-500">Revenue Generated</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-primary">500+</h3>
+                    <p class="text-xs sm:text-sm text-slate-500">Brands Scaled</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-primary">1.2M+</h3>
+                    <p class="text-xs sm:text-sm text-slate-500">Leads Generated</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-primary">96%</h3>
+                    <p class="text-xs sm:text-sm text-slate-500">Client Retention</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-slate-400 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-4">
+                <a href="tel:+919797989421" class="text-sm hover:text-white flex items-center gap-2">
+                    <i data-lucide="phone" class="w-4 h-4"></i> +91 97979 89421
+                </a>
+                <span class="hidden sm:inline text-slate-600">|</span>
+                <a href="mailto:glideup.in@gmail.com" class="text-sm hover:text-white flex items-center gap-2">
+                    <i data-lucide="mail" class="w-4 h-4"></i> glideup.in@gmail.com
+                </a>
+            </div>
+            <p class="text-xs sm:text-sm">© 2026 MetaAdsWala - Best & Affordable Digital Marketing Company Nirman Vihar
+                Delhi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons -->
+    <script>
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    </script>
+    <!-- Analytics - deferred for non-blocking load -->
+    <script src="js/analytics.js" defer></script>
+    <!-- Floating WhatsApp & Call Buttons -->
+    <script src="js/floating-buttons.js" defer></script>
+</body>
+
+</html>
