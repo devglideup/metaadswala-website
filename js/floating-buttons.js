@@ -20,9 +20,9 @@
 
     // Configuration
     const CONFIG = {
-        WHATSAPP_NUMBER: '919797989421',
+        WHATSAPP_NUMBER: '919205736946',
         WHATSAPP_MESSAGE: 'Hi MetaAdsWala! I want to know more about your digital marketing services.',
-        PHONE_NUMBER: '+919797989421',
+        PHONE_NUMBER: '+919205736946',
         SHOW_DELAY: 2000, // Show buttons after 2 seconds
         HIDE_ON_SCROLL_UP: false,
         BUTTON_SIZE_DESKTOP: 60,
@@ -32,6 +32,7 @@
     // Track click events
     function trackClick(type, details) {
         if (typeof gtag === 'function') {
+            // Track GA4 event
             gtag('event', `floating_${type}_click`, {
                 'event_category': 'floating_buttons',
                 'event_label': type,
@@ -49,6 +50,14 @@
                     'whatsapp_number': CONFIG.WHATSAPP_NUMBER,
                     'source': 'floating_button'
                 });
+
+                // Google Ads Conversion - WhatsApp Click (₹300)
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18038332375/whatsapp',
+                    'value': 300,
+                    'currency': 'INR'
+                });
+
             } else if (type === 'call') {
                 gtag('event', 'phone_click', {
                     'event_category': 'contact',
@@ -56,17 +65,24 @@
                     'phone_number': CONFIG.PHONE_NUMBER,
                     'source': 'floating_button'
                 });
+
+                // Google Ads Conversion - Phone Call (₹500)
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18038332375/phone_call',
+                    'value': 500,
+                    'currency': 'INR'
+                });
             }
 
             // Track as conversion
             gtag('event', 'contact_initiated', {
                 'contact_type': type,
-                'value': type === 'whatsapp' ? 1000 : 2000,
+                'value': type === 'whatsapp' ? 300 : 500,
                 'currency': 'INR'
             });
         }
 
-        console.log(`[Floating Buttons] ${type} clicked`);
+        console.log(`[Floating Buttons] ${type} clicked - Google Ads conversion tracked`);
     }
 
     // Create and inject styles

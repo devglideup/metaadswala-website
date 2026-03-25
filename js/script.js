@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.classList.add('bg-red-500', 'hover:bg-red-600');
             if (typeof lucide !== 'undefined') lucide.createIcons();
 
-            alert('Something went wrong. Please try again or call us at +91 97979 89421');
+            alert('Something went wrong. Please try again or call us at +91 92057 36946');
 
             // Reset button after 3 seconds
             setTimeout(() => {

@@ -8,24 +8,41 @@
         window.gtag = window.gtag || function () { dataLayer.push(arguments); };
         window.clarity = window.clarity || function () { (window.clarity.q = window.clarity.q || []).push(arguments); };
     </script>
+
+    <!-- Google Ads (AW-18038332375) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18038332375"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-18038332375');
+    </script>
+
     <!-- Google Analytics 4 - moved to end of body for faster initial load -->
-    <!-- Track Conversion on Thank You Page -->
+    <!-- Track Conversion on Thank You Page - Google Ads Conversion -->
     <script>
         window.addEventListener('load', function () {
             try {
                 if (typeof gtag === 'function') {
+                    // Google Ads Conversion - Form Submit
                     gtag('event', 'conversion', {
-                        'event_category': 'form_submission',
-                        'event_label': 'contact_form_success',
-                        'value': 1
+                        'send_to': 'AW-18038332375/form_submit',
+                        'value': 1000.0,
+                        'currency': 'INR'
                     });
+
+                    // Also track for GA4
                     gtag('event', 'generate_lead', {
                         'currency': 'INR',
-                        'value': 5000
+                        'value': 1000,
+                        'page_path': '/thank-you.html',
+                        'conversion_type': 'form_submission'
                     });
+
+                    console.log('[Google Ads] Form conversion tracked - ₹1000');
                 }
             } catch (e) {
-                // Silent fail - tracking might be blocked
+                console.log('[Google Ads] Conversion tracking blocked');
             }
         });
     </script>
@@ -260,7 +277,7 @@
                     class="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-hover text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold shadow-lg shadow-secondary/25 transition-all hover:scale-105 active:scale-95 text-sm sm:text-base">
                     <i data-lucide="home" class="w-4 h-4 sm:w-5 sm:h-5"></i> Back to Homepage
                 </a>
-                <a href="tel:+919797989421"
+                <a href="tel:+919205736946"
                     class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold transition-all hover:border-slate-300 text-sm sm:text-base">
                     <i data-lucide="phone" class="w-4 h-4 sm:w-5 sm:h-5"></i> Call Us Now
                 </a>
@@ -379,8 +396,8 @@
     <footer class="bg-dark text-slate-400 py-8 text-center">
         <div class="container mx-auto px-4">
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-4">
-                <a href="tel:+919797989421" class="text-sm hover:text-white flex items-center gap-2">
-                    <i data-lucide="phone" class="w-4 h-4"></i> +91 97979 89421
+                <a href="tel:+919205736946" class="text-sm hover:text-white flex items-center gap-2">
+                    <i data-lucide="phone" class="w-4 h-4"></i> +91 92057 36946
                 </a>
                 <span class="hidden sm:inline text-slate-600">|</span>
                 <a href="mailto:glideup.in@gmail.com" class="text-sm hover:text-white flex items-center gap-2">
@@ -400,6 +417,8 @@
     </script>
     <!-- Analytics - deferred for non-blocking load -->
     <script src="js/analytics.js" defer></script>
+    <!-- Google Ads Conversion Tracking -->
+    <script src="js/google-ads-conversions.js" defer></script>
     <!-- Floating WhatsApp & Call Buttons -->
     <script src="js/floating-buttons.js" defer></script>
 </body>
