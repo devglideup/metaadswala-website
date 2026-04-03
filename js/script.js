@@ -258,6 +258,72 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =========================================================================
+    // Form Handling - Web Dev Hero Form
+    // =========================================================================
+    const webdevHeroForm = document.getElementById('webdev-hero-form');
+    if (webdevHeroForm) {
+        webdevHeroForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            handleFormSubmit(webdevHeroForm);
+        });
+    }
+
+    // =========================================================================
+    // Form Handling - Web Dev Bottom Form
+    // =========================================================================
+    const webdevBottomForm = document.getElementById('webdev-bottom-form');
+    if (webdevBottomForm) {
+        webdevBottomForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            handleFormSubmit(webdevBottomForm);
+        });
+    }
+
+    // =========================================================================
+    // Form Handling - Google Ads Hero Form
+    // =========================================================================
+    const googleAdsHeroForm = document.getElementById('google-ads-hero-form');
+    if (googleAdsHeroForm) {
+        googleAdsHeroForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            handleFormSubmit(googleAdsHeroForm);
+        });
+    }
+
+    // =========================================================================
+    // Form Handling - Google Ads Bottom Form
+    // =========================================================================
+    const googleAdsBottomForm = document.getElementById('google-ads-bottom-form');
+    if (googleAdsBottomForm) {
+        googleAdsBottomForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            handleFormSubmit(googleAdsBottomForm);
+        });
+    }
+
+    // =========================================================================
+    // Form Handling - Meta Ads Hero Form
+    // =========================================================================
+    const metaAdsHeroForm = document.getElementById('meta-ads-hero-form');
+    if (metaAdsHeroForm) {
+        metaAdsHeroForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            handleFormSubmit(metaAdsHeroForm);
+        });
+    }
+
+    // =========================================================================
+    // Form Handling - Meta Ads Bottom Form
+    // =========================================================================
+    const metaAdsBottomForm = document.getElementById('meta-ads-bottom-form');
+    if (metaAdsBottomForm) {
+        metaAdsBottomForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            handleFormSubmit(metaAdsBottomForm);
+        });
+    }
+
+    // =========================================================================
     // Console Welcome Message
     // =========================================================================
     console.log('%c MetaAdsWala ', 'background: #0F4C81; color: white; font-size: 16px; font-weight: bold; padding: 8px 16px; border-radius: 4px;');
