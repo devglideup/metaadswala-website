@@ -682,7 +682,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-14 sm:pt-20 pb-16 sm:pb-20 md:pb-28 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-cyan-50">
+    <section class="relative pt-12 sm:pt-16 md:pt-20 pb-16 sm:pb-20 md:pb-28 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-cyan-50">
+        <!-- Background Blobs -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
             <div
                 class="hero-blob absolute -top-20 -right-20 w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-cyan-100 rounded-full blur-3xl mix-blend-multiply animate-blob">
@@ -691,27 +692,90 @@
                 class="hero-blob absolute bottom-40 -left-20 w-[250px] sm:w-[350px] md:w-[400px] lg:w-[500px] h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] bg-sky-100 rounded-full blur-3xl mix-blend-multiply animate-blob animation-delay-2000">
             </div>
         </div>
-        <div class="container mx-auto px-4 relative z-10 text-center max-w-4xl">
-            <div
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm mb-6">
-                <span class="flex h-2 w-2 rounded-full bg-cyan-500 animate-pulse"></span>
-                <span class="text-xs font-bold tracking-wide text-slate-600 uppercase">100+ Sites Delivered</span>
+
+        <div class="container mx-auto px-4 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="text-center lg:text-left">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm mb-6">
+                    <span class="flex h-2 w-2 rounded-full bg-cyan-500 animate-pulse"></span>
+                    <span class="text-xs font-bold tracking-wide text-slate-600 uppercase">100+ Sites Delivered</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold leading-tight text-slate-900 mb-6">
+                    Websites We've Built<br><span class="text-gradient">That Actually Convert</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Shopify stores, landing pages, corporate sites, and e-commerce platforms — designed to drive real results. Get your free web dev consultation today.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#portfolio"
+                        class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-primary/25 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
+                        View Our Work <i data-lucide="arrow-down" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#webdev-contact"
+                        class="bg-white hover:bg-slate-50 text-slate-800 px-8 py-4 rounded-xl font-bold border border-slate-200 shadow-lg transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
+                        Get Free Quote <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
             </div>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold leading-tight text-slate-900 mb-6">
-                Websites We've Built<br><span class="text-gradient">That Actually Convert</span>
-            </h1>
-            <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Shopify stores, landing pages, corporate sites, and e-commerce platforms — designed to drive real results. Browse our portfolio below.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#portfolio"
-                    class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-primary/25 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
-                    View Our Work <i data-lucide="arrow-down" class="w-5 h-5"></i>
-                </a>
-                <a href="contact.html"
-                    class="bg-white hover:bg-slate-50 text-slate-800 px-8 py-4 rounded-xl font-bold border border-slate-200 shadow-lg transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
-                    Start Your Project <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                </a>
+
+            <!-- Right Form Card -->
+            <div class="relative lg:h-[580px] flex items-center justify-center mt-8 lg:mt-0">
+                <!-- Main Form Card -->
+                <div
+                    class="relative z-10 bg-white/90 backdrop-blur-xl border border-white/40 shadow-2xl rounded-3xl p-6 sm:p-8 w-full max-w-md">
+                    <div class="text-center mb-6">
+                        <div
+                            class="inline-flex items-center justify-center w-14 h-14 bg-primary/10 rounded-full mb-3">
+                            <i data-lucide="code-2" class="w-7 h-7 text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Get Free Web Dev Quote</h3>
+                        <p class="text-sm text-slate-600">Tell us about your project and we'll get back within 24 hours</p>
+                    </div>
+
+                    <!-- Web Dev Hero Form -->
+                    <form id="webdev-hero-form" class="space-y-4">
+                        <input type="hidden" name="source" value="Web Dev Hero Form">
+                        <input type="hidden" name="service" value="Web Development">
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Company Name *</label>
+                            <input type="text" name="company_name" placeholder="Your Company" required
+                                autocomplete="organization"
+                                class="w-full px-4 py-3 sm:py-3.5 rounded-xl border-2 border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-sm sm:text-base bg-white">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Your Name *</label>
+                            <input type="text" name="name" placeholder="Enter Your Name" required
+                                autocomplete="name"
+                                class="w-full px-4 py-3 sm:py-3.5 rounded-xl border-2 border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-sm sm:text-base bg-white">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Phone Number *</label>
+                            <input type="tel" name="phone" placeholder="+91 98765 43210" required
+                                autocomplete="tel" inputmode="tel"
+                                class="w-full px-4 py-3 sm:py-3.5 rounded-xl border-2 border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-sm sm:text-base bg-white">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Website URL *</label>
+                            <input type="url" name="website" placeholder="https://yourwebsite.com" required
+                                autocomplete="url"
+                                class="w-full px-4 py-3 sm:py-3.5 rounded-xl border-2 border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-sm sm:text-base bg-white">
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 sm:py-4 rounded-xl shadow-lg shadow-primary/25 transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 text-sm sm:text-base">
+                            Get Free Quote <i data-lucide="arrow-right" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+                        </button>
+
+                        <p class="text-xs text-center text-slate-500 mt-3">
+                            🔒 Your information is 100% secure
+                        </p>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -1284,6 +1348,76 @@
         </div>
     </section>
 
+    <!-- Contact / Bottom Form Section -->
+    <section id="webdev-contact" class="perf-section py-20 sm:py-24 bg-white relative overflow-hidden">
+        <!-- Background Blobs -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+            <div
+                class="hero-blob absolute top-10 sm:top-20 right-10 sm:right-20 w-[250px] sm:w-[300px] md:w-[400px] h-[250px] sm:h-[300px] md:h-[400px] bg-primary/5 rounded-full blur-3xl mix-blend-multiply animate-blob">
+            </div>
+            <div
+                class="hero-blob absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-[250px] sm:w-[300px] md:w-[400px] h-[250px] sm:h-[300px] md:h-[400px] bg-secondary/5 rounded-full blur-3xl mix-blend-multiply animate-blob animation-delay-2000">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Get Your <span class="text-primary">Free Web Dev Quote</span>
+                </h2>
+                <p class="text-lg text-slate-600">
+                    Tell us about your project. Whether it's a Shopify store, corporate site, or landing page — we'll give you a detailed quote within 24 hours.
+                </p>
+            </div>
+
+            <div
+                class="max-w-2xl mx-auto bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-slate-100 p-6 sm:p-10 md:p-12">
+                <form id="webdev-bottom-form" class="space-y-5">
+                    <input type="hidden" name="source" value="Web Dev Bottom Form">
+                    <input type="hidden" name="service" value="Web Development">
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Company Name</label>
+                        <input type="text" name="company_name" placeholder="e.g. My Brand" required
+                            autocomplete="organization"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Name</label>
+                            <input type="text" name="name" placeholder="Your Name" required
+                                autocomplete="name"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Phone</label>
+                            <input type="tel" name="phone" placeholder="+91..." required
+                                autocomplete="tel" inputmode="tel"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Website URL</label>
+                        <input type="url" name="website" placeholder="https://..." required
+                            autocomplete="url"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transition-all hover:-translate-y-1 flex justify-center items-center gap-2 mt-4">
+                        Get Free Web Dev Quote <i data-lucide="arrow-right" class="w-4.5 h-4.5"></i>
+                    </button>
+
+                    <p class="text-xs text-center text-slate-400 mt-4">
+                        No spam, we promise. Your data is safe with us.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="perf-section py-24 relative overflow-hidden">
         <div class="absolute inset-0 z-0">
@@ -1297,7 +1431,7 @@
                 Whether it's a Shopify store, a corporate site, or a high-converting landing page — we deliver.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html"
+                <a href="#webdev-contact"
                     class="bg-white text-primary px-8 py-4 rounded-xl font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105">
                     Get Free Web Dev Quote
                 </a>
@@ -1350,7 +1484,7 @@
         <div class="container mx-auto px-4 pt-12 text-center">
             <h2 class="text-2xl font-bold text-white mb-4">Ready to Build Your Website?</h2>
             <p class="text-slate-400 mb-6 max-w-xl mx-auto">Get started with MetaAdsWala — Shopify experts, custom development, landing pages, and full maintenance support for businesses across Delhi NCR and India.</p>
-            <a href="contact.html"
+            <a href="#webdev-contact"
                 class="inline-block bg-secondary hover:bg-secondary-hover text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-secondary/25 transition-all">
                 Get Free Quote
             </a>
