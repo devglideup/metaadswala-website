@@ -142,4 +142,3 @@ const FORM_ENDPOINT = 'https://script.google.com/macros/s/YOUR_NEW_DEPLOYMENT_ID
 -   **CORS Errors:** Google Apps Script redirects responses. If you see CORS errors in the console but the data *is* arriving in the Sheet, it means the browser is blocking the redirect response reading. However, the provided code uses a robust `fetch` method. If issues persist, verify that "Who has access" is set to "Anyone".
 -   **No Data in Sheet:** Ensure you clicked "Authorize" during deployment. If you need to re-authorize, just deploy a "New version".
 -   **Fields Missing:** Ensure the `name="..."` attributes in your HTML forms match exactly: `company_name`, `name`, `phone`, `website`, `service`. (We have verified the current codebase matches these).
-
