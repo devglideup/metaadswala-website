@@ -20,9 +20,9 @@
 
     // Configuration
     const CONFIG = {
-        WHATSAPP_NUMBER: '919205736946',
+        WHATSAPP_NUMBER: '919797989421',
         WHATSAPP_MESSAGE: 'Hi MetaAdsWala! I want to know more about your digital marketing services.',
-        PHONE_NUMBER: '+919205736946',
+        PHONE_NUMBER: '+919797989421',
         SHOW_DELAY: 2000, // Show buttons after 2 seconds
         HIDE_ON_SCROLL_UP: false,
         BUTTON_SIZE_DESKTOP: 60,

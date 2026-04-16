@@ -841,3 +841,67 @@ textarea:focus-visible {
         break-inside: avoid;
     }
 }
+
+/* ==========================================================================
+   Lucky Spin Wheel
+   ========================================================================== */
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+}
+
+/* Mobile optimization for spinner */
+@media (max-width: 640px) {
+    #spinWheel {
+        width: 320px !important;
+        height: 320px !important;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    #spinWheel {
+        width: 380px !important;
+        height: 380px !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #spinWheel {
+        width: 440px !important;
+        height: 440px !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    #spinWheel {
+        width: 500px !important;
+        height: 500px !important;
+    }
+}
+
+/* Disable slow spin animation on mobile for performance */
+@media (max-width: 640px) {
+    .animate-spin-slow {
+        animation-duration: 6s;
+    }
+}
+
+/* Modal animation states */
+#winModal.active {
+    display: flex !important;
+}
+
+#winModal.active #winModalContent {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+
+/* Particle animation container */
+#spin-particles {
+    pointer-events: none;
+}

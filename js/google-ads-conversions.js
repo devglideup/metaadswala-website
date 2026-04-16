@@ -22,8 +22,8 @@
     // ==========================================================================
     const CONFIG = {
         CONVERSION_ID: 'AW-18038332375',
-        PHONE_NUMBER: '+919205736946',
-        WHATSAPP_NUMBER: '919205736946',
+        PHONE_NUMBER: '+919797989421',
+        WHATSAPP_NUMBER: '919797989421',
         CONVERSION_VALUES: {
             phone_call: 500,     // ₹500 per phone call
             whatsapp: 300,       // ₹300 per WhatsApp click
