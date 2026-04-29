@@ -1,6 +1,0 @@
-# https://metaadswala.com/robots.txt
-User-agent: *
-Allow: /
-
-# XML sitemap
-Sitemap: https://metaadswala.com/sitemap.xml
