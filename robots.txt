@@ -1,6 +1,14 @@
+# =========================================================================
+# robots.txt — MetaAdsWala
+# Complete block for all search engines and AI / LLM bots
+# =========================================================================
+
+# Block all search engines and crawlers by default
 User-agent: *
 Disallow: /
+Noindex: /
 
+# Block AI and LLM web crawlers explicitly
 User-agent: GPTBot
 Disallow: /
 
@@ -13,8 +21,47 @@ Disallow: /
 User-agent: AnthropicAI
 Disallow: /
 
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
 User-agent: Google-Extended
 Disallow: /
 
 User-agent: OAI-Search
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+User-agent: Cohere-ai
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Omilexx
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Imagecopier
+Disallow: /
+
+User-agent: ImagesiftBot
 Disallow: /
